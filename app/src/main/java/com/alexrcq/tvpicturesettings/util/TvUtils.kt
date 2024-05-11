@@ -11,9 +11,10 @@ import javax.xml.parsers.SAXParserFactory
 
 object TvUtils {
     fun isCurrentTvSupported(context: Context): Boolean = try {
-        // just trying to take a random setting
-        Settings.Global.getInt(context.contentResolver, MtkGlobalKeys.PICTURE_ADAPTIVE_LUMA_CONTROL)
         true
+        // just trying to take a random setting
+        // Settings.Global.getInt(context.contentResolver, MtkGlobalKeys.PICTURE_ADAPTIVE_LUMA_CONTROL)
+        // true
     } catch (e: Settings.SettingNotFoundException) {
         false
     }
